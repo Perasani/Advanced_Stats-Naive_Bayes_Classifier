@@ -1,0 +1,530 @@
+C:\Users\Administrator\PycharmProjects\Search_Engine\venv\Scripts\python.exe C:/Users/Administrator/PycharmProjects/Stats/mainnnnn.py
+(48842, 15)
+   age  workclass  fnlwgt  ... hours-per-week  native-country income
+0   25    Private  226802  ...             40   United-States  <=50K
+1   38    Private   89814  ...             50   United-States  <=50K
+2   28  Local-gov  336951  ...             40   United-States   >50K
+3   44    Private  160323  ...             40   United-States   >50K
+4   18          ?  103497  ...             30   United-States  <=50K
+
+[5 rows x 15 columns]
+Index(['age', 'workclass', 'fnlwgt', 'education', 'education_num',
+       'marital_status', 'occupation', 'relationship', 'race', 'sex',
+       'capital_gain', 'capital_loss', 'hours_per_week', 'native_country',
+       'income'],
+      dtype='object')
+   age  workclass  fnlwgt  ... hours_per_week  native_country income
+0   25    Private  226802  ...             40   United-States  <=50K
+1   38    Private   89814  ...             50   United-States  <=50K
+2   28  Local-gov  336951  ...             40   United-States   >50K
+3   44    Private  160323  ...             40   United-States   >50K
+4   18          ?  103497  ...             30   United-States  <=50K
+
+[5 rows x 15 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 48842 entries, 0 to 48841
+Data columns (total 15 columns):
+ #   Column          Non-Null Count  Dtype 
+---  ------          --------------  ----- 
+ 0   age             48842 non-null  int64 
+ 1   workclass       48842 non-null  object
+ 2   fnlwgt          48842 non-null  int64 
+ 3   education       48842 non-null  object
+ 4   education_num   48842 non-null  int64 
+ 5   marital_status  48842 non-null  object
+ 6   occupation      48842 non-null  object
+ 7   relationship    48842 non-null  object
+ 8   race            48842 non-null  object
+ 9   sex             48842 non-null  object
+ 10  capital_gain    48842 non-null  int64 
+ 11  capital_loss    48842 non-null  int64 
+ 12  hours_per_week  48842 non-null  int64 
+ 13  native_country  48842 non-null  object
+ 14  income          48842 non-null  object
+dtypes: int64(6), object(9)
+memory usage: 5.6+ MB
+None
+There are 9 categorical variables
+
+The categorical variables are :
+
+ ['workclass', 'education', 'marital_status', 'occupation', 'relationship', 'race', 'sex', 'native_country', 'income']
+workclass         0
+education         0
+marital_status    0
+occupation        0
+relationship      0
+race              0
+sex               0
+native_country    0
+income            0
+dtype: int64
+------------------------------------------------
+Private             33906
+Self-emp-not-inc     3862
+Local-gov            3136
+?                    2799
+State-gov            1981
+Self-emp-inc         1695
+Federal-gov          1432
+Without-pay            21
+Never-worked           10
+Name: workclass, dtype: int64
+HS-grad         15784
+Some-college    10878
+Bachelors        8025
+Masters          2657
+Assoc-voc        2061
+11th             1812
+Assoc-acdm       1601
+10th             1389
+7th-8th           955
+Prof-school       834
+9th               756
+12th              657
+Doctorate         594
+5th-6th           509
+1st-4th           247
+Preschool          83
+Name: education, dtype: int64
+Married-civ-spouse       22379
+Never-married            16117
+Divorced                  6633
+Separated                 1530
+Widowed                   1518
+Married-spouse-absent      628
+Married-AF-spouse           37
+Name: marital_status, dtype: int64
+Prof-specialty       6172
+Craft-repair         6112
+Exec-managerial      6086
+Adm-clerical         5611
+Sales                5504
+Other-service        4923
+Machine-op-inspct    3022
+?                    2809
+Transport-moving     2355
+Handlers-cleaners    2072
+Farming-fishing      1490
+Tech-support         1446
+Protective-serv       983
+Priv-house-serv       242
+Armed-Forces           15
+Name: occupation, dtype: int64
+Husband           19716
+Not-in-family     12583
+Own-child          7581
+Unmarried          5125
+Wife               2331
+Other-relative     1506
+Name: relationship, dtype: int64
+White                 41762
+Black                  4685
+Asian-Pac-Islander     1519
+Amer-Indian-Eskimo      470
+Other                   406
+Name: race, dtype: int64
+Male      32650
+Female    16192
+Name: sex, dtype: int64
+United-States                 43832
+Mexico                          951
+?                               857
+Philippines                     295
+Germany                         206
+Puerto-Rico                     184
+Canada                          182
+El-Salvador                     155
+India                           151
+Cuba                            138
+England                         127
+China                           122
+South                           115
+Jamaica                         106
+Italy                           105
+Dominican-Republic              103
+Japan                            92
+Guatemala                        88
+Poland                           87
+Vietnam                          86
+Columbia                         85
+Haiti                            75
+Portugal                         67
+Taiwan                           65
+Iran                             59
+Greece                           49
+Nicaragua                        49
+Peru                             46
+Ecuador                          45
+France                           38
+Ireland                          37
+Hong                             30
+Thailand                         30
+Cambodia                         28
+Trinadad&Tobago                  27
+Laos                             23
+Yugoslavia                       23
+Outlying-US(Guam-USVI-etc)       23
+Scotland                         21
+Honduras                         20
+Hungary                          19
+Holand-Netherlands                1
+Name: native_country, dtype: int64
+<=50K    37155
+>50K     11687
+Name: income, dtype: int64
+--------------------------------------------------
+Private             0.694198
+Self-emp-not-inc    0.079071
+Local-gov           0.064207
+?                   0.057307
+State-gov           0.040559
+Self-emp-inc        0.034704
+Federal-gov         0.029319
+Without-pay         0.000430
+Never-worked        0.000205
+Name: workclass, dtype: float64
+C:\Users\Administrator\PycharmProjects\Stats\mainnnnn.py:59: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  print(df[var].value_counts() / np.float(len(df)))
+HS-grad         0.323164
+Some-college    0.222718
+Bachelors       0.164305
+Masters         0.054400
+Assoc-voc       0.042197
+11th            0.037099
+Assoc-acdm      0.032779
+10th            0.028439
+7th-8th         0.019553
+Prof-school     0.017075
+9th             0.015478
+12th            0.013452
+Doctorate       0.012162
+5th-6th         0.010421
+1st-4th         0.005057
+Preschool       0.001699
+Name: education, dtype: float64
+Married-civ-spouse       0.458192
+Never-married            0.329982
+Divorced                 0.135805
+Separated                0.031325
+Widowed                  0.031080
+Married-spouse-absent    0.012858
+Married-AF-spouse        0.000758
+Name: marital_status, dtype: float64
+Prof-specialty       0.126367
+Craft-repair         0.125138
+Exec-managerial      0.124606
+Adm-clerical         0.114881
+Sales                0.112690
+Other-service        0.100794
+Machine-op-inspct    0.061873
+?                    0.057512
+Transport-moving     0.048217
+Handlers-cleaners    0.042423
+Farming-fishing      0.030507
+Tech-support         0.029606
+Protective-serv      0.020126
+Priv-house-serv      0.004955
+Armed-Forces         0.000307
+Name: occupation, dtype: float64
+Husband           0.403669
+Not-in-family     0.257627
+Own-child         0.155215
+Unmarried         0.104930
+Wife              0.047725
+Other-relative    0.030834
+Name: relationship, dtype: float64
+White                 0.855043
+Black                 0.095922
+Asian-Pac-Islander    0.031100
+Amer-Indian-Eskimo    0.009623
+Other                 0.008313
+Name: race, dtype: float64
+Male      0.668482
+Female    0.331518
+Name: sex, dtype: float64
+United-States                 0.897424
+Mexico                        0.019471
+?                             0.017546
+Philippines                   0.006040
+Germany                       0.004218
+Puerto-Rico                   0.003767
+Canada                        0.003726
+El-Salvador                   0.003173
+India                         0.003092
+Cuba                          0.002825
+England                       0.002600
+China                         0.002498
+South                         0.002355
+Jamaica                       0.002170
+Italy                         0.002150
+Dominican-Republic            0.002109
+Japan                         0.001884
+Guatemala                     0.001802
+Poland                        0.001781
+Vietnam                       0.001761
+Columbia                      0.001740
+Haiti                         0.001536
+Portugal                      0.001372
+Taiwan                        0.001331
+Iran                          0.001208
+Greece                        0.001003
+Nicaragua                     0.001003
+Peru                          0.000942
+Ecuador                       0.000921
+France                        0.000778
+Ireland                       0.000758
+Hong                          0.000614
+Thailand                      0.000614
+Cambodia                      0.000573
+Trinadad&Tobago               0.000553
+Laos                          0.000471
+Yugoslavia                    0.000471
+Outlying-US(Guam-USVI-etc)    0.000471
+Scotland                      0.000430
+Honduras                      0.000409
+Hungary                       0.000389
+Holand-Netherlands            0.000020
+Name: native_country, dtype: float64
+<=50K    0.760718
+>50K     0.239282
+Name: income, dtype: float64
+-------------------------------------------------
+['Private' 'Local-gov' '?' 'Self-emp-not-inc' 'Federal-gov' 'State-gov'
+ 'Self-emp-inc' 'Without-pay' 'Never-worked']
+----------------------------------------------
+================================================================
+Private             33906
+Self-emp-not-inc     3862
+Local-gov            3136
+State-gov            1981
+Self-emp-inc         1695
+Federal-gov          1432
+Without-pay            21
+Never-worked           10
+Name: workclass, dtype: int64
+================================================================
+['Machine-op-inspct' 'Farming-fishing' 'Protective-serv' '?'
+ 'Other-service' 'Prof-specialty' 'Craft-repair' 'Adm-clerical'
+ 'Exec-managerial' 'Tech-support' 'Sales' 'Priv-house-serv'
+ 'Transport-moving' 'Handlers-cleaners' 'Armed-Forces']
+================================================================
+Prof-specialty       6172
+Craft-repair         6112
+Exec-managerial      6086
+Adm-clerical         5611
+Sales                5504
+Other-service        4923
+Machine-op-inspct    3022
+?                    2809
+Transport-moving     2355
+Handlers-cleaners    2072
+Farming-fishing      1490
+Tech-support         1446
+Protective-serv       983
+Priv-house-serv       242
+Armed-Forces           15
+Name: occupation, dtype: int64
+==================================================================
+=====================================================================
+United-States                 43832
+Mexico                          951
+Philippines                     295
+Germany                         206
+Puerto-Rico                     184
+Canada                          182
+El-Salvador                     155
+India                           151
+Cuba                            138
+England                         127
+China                           122
+South                           115
+Jamaica                         106
+Italy                           105
+Dominican-Republic              103
+Japan                            92
+Guatemala                        88
+Poland                           87
+Vietnam                          86
+Columbia                         85
+Haiti                            75
+Portugal                         67
+Taiwan                           65
+Iran                             59
+Greece                           49
+Nicaragua                        49
+Peru                             46
+Ecuador                          45
+France                           38
+Ireland                          37
+Hong                             30
+Thailand                         30
+Cambodia                         28
+Trinadad&Tobago                  27
+Yugoslavia                       23
+Outlying-US(Guam-USVI-etc)       23
+Laos                             23
+Scotland                         21
+Honduras                         20
+Hungary                          19
+Holand-Netherlands                1
+Name: native_country, dtype: int64
+=========================================================================
+workclass  contains  9  labels
+education  contains  16  labels
+marital_status  contains  7  labels
+occupation  contains  15  labels
+relationship  contains  6  labels
+race  contains  5  labels
+sex  contains  2  labels
+native_country  contains  42  labels
+income  contains  2  labels
+There are 6 numerical variables
+
+The numerical variables are : ['age', 'fnlwgt', 'education_num', 'capital_gain', 'capital_loss', 'hours_per_week']
+===============================
+(34189, 14)
+(14653, 14)
+=================================
+age                int64
+workclass         object
+fnlwgt             int64
+education         object
+education_num      int64
+marital_status    object
+occupation        object
+relationship      object
+race              object
+sex               object
+capital_gain       int64
+capital_loss       int64
+hours_per_week     int64
+native_country    object
+dtype: object
+====================================================================
+['workclass', 'education', 'marital_status', 'occupation', 'relationship', 'race', 'sex', 'native_country']
+====================================================================
+=====================================================================
+workclass         0.057211
+education         0.000000
+marital_status    0.000000
+occupation        0.057358
+relationship      0.000000
+race              0.000000
+sex               0.000000
+native_country    0.017608
+dtype: float64
+=====================================================================
+workclass         0.057211
+education         0.000000
+marital_status    0.000000
+occupation        0.057358
+relationship      0.000000
+race              0.000000
+sex               0.000000
+native_country    0.017608
+dtype: float64
+workclass         0
+education         0
+marital_status    0
+occupation        0
+relationship      0
+race              0
+sex               0
+native_country    0
+dtype: int64
+workclass         0
+education         0
+marital_status    0
+occupation        0
+relationship      0
+race              0
+sex               0
+native_country    0
+dtype: int64
+age               0
+workclass         0
+fnlwgt            0
+education         0
+education_num     0
+marital_status    0
+occupation        0
+relationship      0
+race              0
+sex               0
+capital_gain      0
+capital_loss      0
+hours_per_week    0
+native_country    0
+dtype: int64
+age               0
+workclass         0
+fnlwgt            0
+education         0
+education_num     0
+marital_status    0
+occupation        0
+relationship      0
+race              0
+sex               0
+capital_gain      0
+capital_loss      0
+hours_per_week    0
+native_country    0
+dtype: int64
+C:\Users\Administrator\PycharmProjects\Search_Engine\venv\lib\site-packages\sklearn\utils\validation.py:1675: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: ['tuple']. An error will be raised in 1.2.
+  warnings.warn(
+C:\Users\Administrator\PycharmProjects\Search_Engine\venv\lib\site-packages\sklearn\utils\validation.py:1675: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: ['tuple']. An error will be raised in 1.2.
+  warnings.warn(
+==========================================
+['<=50K' '>50K' '>50K' ... '<=50K' '<=50K' '<=50K']
+===========================================
+Model accuracy score: 0.8057
+C:\Users\Administrator\PycharmProjects\Search_Engine\venv\lib\site-packages\sklearn\utils\validation.py:1675: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: ['tuple']. An error will be raised in 1.2.
+  warnings.warn(
+C:\Users\Administrator\PycharmProjects\Search_Engine\venv\lib\site-packages\sklearn\utils\validation.py:1675: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: ['tuple']. An error will be raised in 1.2.
+  warnings.warn(
+Training-set accuracy score: 0.8072
+Training set score: 0.8072
+C:\Users\Administrator\PycharmProjects\Search_Engine\venv\lib\site-packages\sklearn\utils\validation.py:1675: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: ['tuple']. An error will be raised in 1.2.
+  warnings.warn(
+Test set score: 0.8057
+Null accuracy score: 0.7582
+=======================================================
+Confusion matrix
+
+ [[8992 2146]
+ [ 701 2814]]
+
+True Positives(TP) =  8992
+
+True Negatives(TN) =  2814
+
+False Positives(FP) =  2146
+
+False Negatives(FN) =  701
+=======================================================
+              precision    recall  f1-score   support
+
+       <=50K       0.93      0.81      0.86     11138
+        >50K       0.57      0.80      0.66      3515
+
+    accuracy                           0.81     14653
+   macro avg       0.75      0.80      0.76     14653
+weighted avg       0.84      0.81      0.82     14653
+
+====================================================================
+Classification accuracy : 0.8057
+====================================================================
+Classification error : 0.1943
+====================================================================
+Precision : 0.8073
+Recall or Sensitivity : 0.9277
+True Positive Rate : 0.9277
+False Positive Rate : 0.4327
+Specificity : 0.5673
+=====================================================================
+
+
+Process finished with exit code 0
